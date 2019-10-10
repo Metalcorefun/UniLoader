@@ -1,0 +1,41 @@
+{
+  "DatabaseConnectionString": "User Id=USERNAME;Password=PASSWORD;Data Source=LINK_TO_DATABASE;Connection Timeout=10000",
+  "WorkingDirectory": "DIRECTORY",
+  "FileExtension": "*.xlsx",
+  "DeleteFilesAfterLoad": "False",
+  "BatchSize": "500",
+  "Tables": [
+    {
+      "TableName": "TABLE_NAME1",
+      "Worksheet": "report",
+      "SchemaInUse": "DATABASE_SCHEMA",
+      "SubDirectory": "\\SUBDIRECTORY1",
+      "HeaderRow": "4",
+      "StartRow": "5",
+      "StartColumn": "2",
+      "InsertCurrentDate": "true", 
+      "Columns":
+      [{ "ExcelName": "ФИО", "DBName": "FIO", "DBType": "VARCHAR2(200)" },
+        { "ExcelName": "Телефон", "DBName": "TEL", "DBType": "VARCHAR2(20)" },
+        { "ExcelName": "Электронный адрес", "DBName": "EMAIL", "DBType": "VARCHAR2(50)" },
+        { "ExcelName": "Дата регистрации", "DBName": "REG_DATE", "DBType": "DATE" },
+        { "ExcelName": "Статус", "DBName": "STATUS", "DBType": "VARCHAR2(50)" }]
+    },
+    {
+      "TableName": "TABLE_NAME2",
+      "Worksheet": "report",
+      "SchemaInUse": "DATABASE_SCHEMA",
+      "SubDirectory": "\\SUBDIRECTORY2",
+      "HeaderRow": "1",
+      "StartRow": "3",
+      "StartColumn": "1",
+      "InsertCurrentDate": "false", 
+      "Columns":
+    [ {"ExcelName":"Название товара", "DBName":"ITEM_NAME", "DBType":"VARCHAR2(50)"},
+        {"ExcelName":"Тип товара","DBName":"ITEM_TYPE", "DBType":"VARCHAR2(50)"},
+        {"ExcelName":"Серийный номер", "DBName":"SER_NUM", "DBType":"INTEGER"},
+        {"ExcelName":"Фирма-изготовитель", "DBName":"MANUFACTURER", "DBType":"VARCHAR2(50)"},
+        {"ExcelName":"Дата изготовления", "DBName":"PRODUCTION_DATE", "DBType":"DATE"}]
+    }
+  ]
+}
